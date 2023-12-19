@@ -57,6 +57,7 @@ class Products(dbConnection):
         for record in records:
             print(record)
         self.close()
+        return f'Products details fetched successfully'
 
     def UpdateProductInfo(self):
         self.selectProducts()

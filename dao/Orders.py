@@ -21,6 +21,7 @@ class Orders(dbConnection):
         self.stmt.execute(create_orders_str)
         self.stmt.close()
         print('Orders Tables created successfully------:')
+        return f'Created succesfully'
 
     def addOrder(self):
 

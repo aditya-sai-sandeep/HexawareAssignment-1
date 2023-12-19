@@ -33,14 +33,14 @@ try:
             create = False
 
         print("select table")
-        print("1.Customers\n2.Products\n3.Orders\n4.OrderDetails\n5.Inventory")
+        print("1.Customers\n2.Products\n3.Orders\n4.OrderDetails\n5.Inventory\n6.Exit")
 
         choice = int(input("enter your choice"))
         if choice == 1:
             while True:
                 print(
                     "1.Add customer\t2.View Customers Data\t3.Update Customer Data\n4.Delete Customer Data\t5.Get "
-                    "Customer Details by ID\t6.Calculate Total Orders")
+                    "Customer Details by ID\t6.Calculate Total Orders\n7.Exit")
                 choice = int(input("enter your choice"))
                 if choice == 1:
                     customers1.addCustomer()
@@ -61,7 +61,7 @@ try:
         elif choice == 2:
             while True:
                 print("1.Add Product\t2.View Product Details\t3.Update Product Details\n4.Delete Product\t5.Get Product"
-                      "by ID\t6.Check for availability")
+                      "by ID\t6.Check for availability\n7.Exit")
                 choice = int(input("enter your choice"))
                 if choice == 1:
                     products1.addProduct()
@@ -82,7 +82,7 @@ try:
         elif choice == 3:
             while True:
                 print("1.Add Order\t2.View Order Details\t3.Update Order Details\n4.Delete Order\t5.Get Order"
-                      "by ID\t6.Update Order Status\n7.Calculate Amount for Order\t8.Cancel Order")
+                      "by ID\t6.Update Order Status\n7.Calculate Amount for Order\t8.Cancel Order\t9.Exit")
                 choice = int(input("enter your choice"))
                 if choice == 1:
                     orders1.addOrder()
@@ -170,6 +170,8 @@ try:
                     inventory1.ListOutOfStockProducts()
                 else:
                     break
+        else:
+            break
 except CustomError as e:
     print(e)
 except InsufficientStockException as e:

@@ -77,6 +77,8 @@ class Customers(dbConnection):
         for i in recods:
             print(i)
         self.close()
+        return f'Customers details fetched successfully'
+
 
     def UpdateCustomerInfo(self):
         self.select()
